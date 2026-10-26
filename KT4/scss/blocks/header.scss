@@ -1,0 +1,52 @@
+@use '../common/variables' as *;
+
+.header {
+  &__container {
+    width: 1126px;
+    margin: 0 auto;
+    height: 75px;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 21px;
+    font-weight: 700;
+    margin-right: 39px;
+    color: #2D2D2D;
+    span { color: #006B99; }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    &-link {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: #33383F;
+      &:hover { color: #006B99; }
+    }
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    margin-left: auto;
+  }
+  &__signin {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $color-blue;
+    &:hover { color: $color-blue-dark; }
+  }
+  &__button {
+    font-weight: 400;
+    padding: 6px 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+    background: $color-blue;
+    &:hover { background: $color-blue-dark; }
+  }
+}

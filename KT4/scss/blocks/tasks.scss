@@ -1,0 +1,31 @@
+@use '../common/variables' as *;
+@use '../common/mixins' as *;
+@use '../common/extends';
+
+.tasks {
+  &__container {
+    width: min(1080px, calc(100% - 64px));
+    margin-inline: auto;
+    padding-top: 85px;
+    padding-bottom: 90px;
+  }
+  &__title { @include title(32px, 1.2); }
+  &__intro {
+     max-width: 550px; 
+     margin: 18px 0 45px; 
+     font-size: 13px; 
+    }
+  &__grid {
+    display: grid; 
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 64px;
+  }
+  &__card {
+    &-icon {
+         display: block; 
+         margin-bottom: 8px; 
+        }
+    &-title { @include title(25px, 31px); }
+    &-text { @extend %card-text; }
+  }
+}

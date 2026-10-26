@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+@mixin title($size, $height) {
+  font-family: Georgia, serif;
+  font-size: $size;
+  font-weight: 400;
+  line-height: $height;
+  color: $color-dark;
+}

@@ -1,0 +1,52 @@
+@use '../common/variables' as *;
+@use '../common/mixins' as *;
+@use '../common/extends';
+
+.benefits {
+
+  &__container {
+
+    width: 1130px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 120px;
+  }
+
+  &__card {
+
+    width: 355px;
+    padding: 25px;
+
+    &_theme_fast { 
+        background: $color-yellow;
+     }
+
+    &_theme_more { 
+        background: $color-cyan; 
+    }
+
+    &_theme_safe { 
+        background: $color-pink; 
+    }
+
+    &-icon { 
+        margin-bottom: 8px; 
+        display: block; 
+    }
+
+    &-title {
+
+      font-family: Fraunces, sans-serif;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 31.25px;
+      color: $color-dark;
+    }
+
+    &-text { 
+        @extend %card-text;
+     }
+  }
+}

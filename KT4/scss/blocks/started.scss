@@ -1,0 +1,39 @@
+@use '../common/variables' as *;
+@use '../common/mixins' as *;
+
+.started {
+  &__container {
+    width: min(1080px, calc(100% - 64px));
+    margin-inline: auto; 
+    margin-top: 80px; 
+    margin-bottom: 127px; 
+    padding: 45px; 
+    background: $color-bg-started;
+  }
+  &__title {
+     @include title(42px, 50px); 
+     margin-bottom: 18px; 
+    }
+  &__text { 
+    font-size: 18px; 
+    font-weight: 400; 
+    line-height: 27px; 
+    color: $color-dark; 
+    margin-bottom: 36px;
+ }
+  &__button {
+    display: inline-block; 
+    padding: 8px 32px; 
+    font-size: 17px; 
+    color: #fff; 
+    background: $color-bg-blue; 
+    line-height: 27px; 
+    cursor: pointer;
+    &:hover { background: $color-blue-dark; }
+  }
+  &__notes {
+     color: $color-gray; 
+     font-size: 13px; 
+     margin-top: 20px; 
+    }
+}

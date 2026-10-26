@@ -1,0 +1,37 @@
+// 1. Сначала подключаем переменные, миксины и шаблоны
+@use 'common/variables' as *;
+@use 'common/mixins' as *;
+@use 'common/extends' as *;
+
+// 2. Потом подключаем все блоки
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/trusted';
+@use 'blocks/benefits';
+@use 'blocks/care';
+@use 'blocks/about';
+@use 'blocks/track';
+@use 'blocks/tasks';
+@use 'blocks/blog';
+@use 'blocks/started';
+@use 'blocks/footer';
+// 2. А уже ПОТОМ пишем базовые стили
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  max-width: 1440px;
+  letter-spacing: 0.2px;
+}
+
+a {
+  text-decoration: none;
+}
